@@ -45,12 +45,12 @@ const ComputersCanvas = () => {
     const handleMobileChange = (e) => setIsMobile(e.matches);
     const handleTabletChange = (e) => setIsTablet(e.matches);
 
-    mobileQuery.addEventListener('change', handleMobileChange);
+    mediaQuery.addEventListener('change', handleMobileChange);
     tabletQuery.addEventListener('change', handleTabletChange);
 
 
    return () => {
-      mobileQuery.removeEventListener('change', handleMobileChange);
+      mediaQuery.removeEventListener('change', handleMobileChange);
       tabletQuery.removeEventListener('change', handleTabletChange);
     };
   }, []);
