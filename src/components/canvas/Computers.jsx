@@ -8,7 +8,7 @@ const Computers = ({ isMobile, isTablet }) => {
   const computer = useGLTF('./desktop_pc/scene.gltf')
 
   const scale = isMobile ? 0.35 : isTablet ? 0.5 : 0.75;
-  const position = isMobile ? [0, -1, -0.5] : isTablet ? [0, -1, -1] : [0, -3.8, -1];
+  const position = isMobile ? [0, -2, -0.5] : isTablet ? [0, -1, -1] : [0, -3.8, -1];
 
   return (
     <mesh>
