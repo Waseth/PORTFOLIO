@@ -4,8 +4,12 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
 // import { canvas } from 'framer-motion/client';
 
-const Computers = ({ isMobile }) => {
+const Computers = ({ isMobile, isTablet }) => {
   const computer = useGLTF('./desktop_pc/scene.gltf')
+
+  const scale = isMobile ? 0.35 : isTablet ? 0.55 : 0.75;
+  const position = isMobile ? [0, -1.5, -0.5] : isTablet ? [0, -2.5, -1] : [0, -3.8, -1];
+
   return (
     <mesh>
       <hemisphereLight intensity={4} groundColor="black" />
@@ -19,8 +23,8 @@ const Computers = ({ isMobile }) => {
       />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.35 : 0.75}
-        position={isMobile ? [0, 0, -0.5, 2]:[0, -3.8, -1]}
+        scale={scale}
+        position={position}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -29,23 +33,28 @@ const Computers = ({ isMobile }) => {
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 500px)');
+    const tabletQuery = window.matchMedia('(min-width: 501px) and (max-width: 1024px)');
 
     setIsMobile(mediaQuery.matches);
+    setIsTablet(tabletQuery.matches);
 
-    const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches);
-    };
+    const handleMobileChange = (e) => setIsMobile(e.matches);
+    const handleTabletChange = (e) => setIsTablet(e.matches);
 
-    mediaQuery.addEventListener('change', handleMediaQueryChange);
+    mobileQuery.addEventListener('change', handleMobileChange);
+    tabletQuery.addEventListener('change', handleTabletChange);
 
 
-    return () => {
-      mediaQuery.removeEventListener('change', handleMediaQueryChange);
+   return () => {
+      mobileQuery.removeEventListener('change', handleMobileChange);
+      tabletQuery.removeEventListener('change', handleTabletChange);
     };
   }, []);
+
   return (
     <Canvas
       frameloop='demand'
@@ -58,7 +67,7 @@ const ComputersCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Computers isMobile={isMobile} />
+        <Computers isMobile={isMobile}  isTablet={isTablet}/>
       </Suspense>
       <Preload all />
     </Canvas>
