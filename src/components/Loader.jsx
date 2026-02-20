@@ -1,9 +1,12 @@
-import React from 'react'
+import { Html, useProgress } from '@react-three/drei';
 
-const Loader = () => {
+const CanvasLoader = () => {
+  const { progress } = useProgress();
   return (
-    <div>Loader</div>
+    <Html as='div' center>
+      <span style={{ color: 'white' }}>{progress.toFixed(2)}% loaded</span>
+    </Html>
   )
 }
 
-export default Loader
+export default CanvasLoader;
