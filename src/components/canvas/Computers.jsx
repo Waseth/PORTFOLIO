@@ -36,8 +36,8 @@ const ComputersCanvas = () => {
   const [isTablet, setIsTablet] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 500px)');
-    const tabletQuery = window.matchMedia('(min-width: 501px) and (max-width: 1024px)');
+    const mediaQuery = window.matchMedia('(max-width: 640px)');
+    const tabletQuery = window.matchMedia('(min-width: 768px) and (max-width: 1024px)');
 
     setIsMobile(mediaQuery.matches);
     setIsTablet(tabletQuery.matches);
