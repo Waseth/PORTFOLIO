@@ -4,6 +4,7 @@ import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
+import externalLink from "./externalLink.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -27,9 +28,14 @@ import moringa from "./company/moringa.png";
 import reactIcon from "./company/reactIcon.png";
 import pythonIcon from "./company/pythonIcon.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import expensify from "./expensify.jpeg";
+import eatWise from "./eatWise.jpeg";
+
+import joash from "./joash.jpeg";
+import alice from "./alice.jpeg";
+import lawrence from "./lawrence.jpeg"
+import liam from "./liam.jpeg";
+
 
 export {
   logo,
@@ -38,6 +44,7 @@ export {
   mobile,
   web,
   github,
+  externalLink,
   menu,
   close,
   css,
@@ -50,7 +57,10 @@ export {
   moringa,
   pythonIcon,
   reactIcon,
-  carrent,
-  jobit,
-  tripguide,
+  expensify,
+  eatWise,
+  joash,
+  alice,
+  liam,
+  lawrence
 };

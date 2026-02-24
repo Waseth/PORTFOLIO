@@ -13,9 +13,12 @@ import {
   moringa,
   reactIcon,
   pythonIcon,
-  carrent,
-  jobit,
-  tripguide,
+  expensify,
+  eatWise,
+  joash,
+  alice,
+  lawrence,
+  liam,
 } from "../assets";
 
 export const navLinks = [
@@ -136,93 +139,82 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "Working with Waseth on our gym website was a great experience. He took time to understand the vision and turned it into something clean, modern, and easy for our members to use. You can tell he genuinely cares about getting things right.",
+    name: "Dr Joash Aloo",
+    designation: "Managing Director",
+    company: "JAREJA Limited Company",
+    image: joash,
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+      "I shared my idea for an online cake business, and Waseth brought it to life beautifully and professionally. The site feels warm, welcoming, and simple to navigate for customers of all ages. He really knows how to turn ideas into something real and meaningful.",
+    name: "Alice Odhiambo",
+    designation: "Founder, CEO and Managing director",
+    company: "Wozeliz Link",
+    image: alice,
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "We’ve collaborated on several project ideas, and what stands out about Waseth is his creativity and willingness to explore new approaches. He’s not afraid to experiment, but he also thinks about structure and long-term scalability.",
+    name: "Lawrence Wambua",
+    designation: "Business Collaborator",
+    company: "W & W Limited",
+    image: lawrence,
   },
+  {
+    testimonial:
+      "During our time at Moringa, Waseth was always the type to dig deeper instead of settling for surface-level solutions. He asks the right questions and genuinely wants to understand how things work.",
+    name: "Liam Josiah",
+    designation: "Software Developer",
+    company: "Innovix solutions",
+    image: liam,
+  }
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Expensify",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A dynamic 4-week budgeting app with automated calculations and visual tracking.",
     tags: [
       {
-        name: "react",
+        name: "HTML",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "CSS",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Javascript",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: expensify,
+    source_code_link: "https://github.com/Waseth/Expensify",
+    live_link: "https://expensify-beta-orcin.vercel.app/",
   },
   {
-    name: "Job IT",
+    name: "Eat Wise",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "EatWise is a personal health dashboard for tracking calories, meals and daily activity.",
     tags: [
       {
-        name: "react",
+        name: "HTML",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "CSS",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Javascript",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: eatWise,
+    source_code_link: "https://github.com/Waseth/EatWise",
+    live_link: "https://eat-wise-three.vercel.app/",
   },
 ];
 
