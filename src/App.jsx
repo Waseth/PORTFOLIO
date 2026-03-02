@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from './components';
-import SocialAtom from "./components/SocialAtom";
+
 
 const App = () => {
   return (
@@ -19,12 +19,6 @@ const App = () => {
           <Contact />
           <StarsCanvas />
         </div>
-          // In your Hero or About section
-        <SocialAtom
-          profileImage="/profile.jpg"
-          name="Your Name"
-          bio="Designer & Developer"
-        />
       </div>
     </BrowserRouter>
   )
