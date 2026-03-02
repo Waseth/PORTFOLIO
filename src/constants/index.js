@@ -191,8 +191,8 @@ const projects = [
       },
     ],
     image: expensify,
-    source_code_link: "https://expensifyv2.vercel.app/",
-    live_link: "https://expensify-beta-orcin.vercel.app/",
+    source_code_link: "https://github.com/Waseth/Expensify-React-version-",
+    live_link: "https://expensifyv2.vercel.app/",
   },
   {
     name: "Eat Wise",
