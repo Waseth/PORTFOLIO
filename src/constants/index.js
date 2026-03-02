@@ -178,20 +178,20 @@ const projects = [
       "A dynamic 4-week budgeting app with automated calculations and visual tracking.",
     tags: [
       {
-        name: "HTML",
+        name: "REACT",
         color: "blue-text-gradient",
       },
       {
-        name: "CSS",
+        name: "FLASK",
         color: "green-text-gradient",
       },
       {
-        name: "Javascript",
+        name: "MySQL",
         color: "pink-text-gradient",
       },
     ],
     image: expensify,
-    source_code_link: "https://github.com/Waseth/Expensify",
+    source_code_link: "https://expensifyv2.vercel.app/",
     live_link: "https://expensify-beta-orcin.vercel.app/",
   },
   {
