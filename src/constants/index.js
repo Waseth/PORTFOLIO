@@ -190,7 +190,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: expensify,
+    // image: expensify,
     source_code_link: "https://github.com/Waseth/Expensify-React-version-",
     live_link: "https://expensifyv2.vercel.app/",
   },
