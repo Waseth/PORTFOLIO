@@ -4,12 +4,19 @@ import { github, externalLink } from '../assets'
 import { SectionWrapper } from "../hoc";
 import { projects } from '../constants'
 import { fadeIn, textVariant } from "../utils/motion";
-import { Utensils, BarChart3, Wallet, Code } from 'lucide-react';
+import { Utensils, BarChart3, Wallet, Code, Package, Box, PackageOpen, ClipboardList } from 'lucide-react';
 
 // Icon mapping based on project name or description
 const getProjectIcon = (name, description) => {
   const lowerName = name.toLowerCase();
   const lowerDesc = description.toLowerCase();
+
+  // Inventory management project
+  if (lowerName.includes('inventory') || lowerDesc.includes('inventory') ||
+      lowerName.includes('stock') || lowerDesc.includes('stock') ||
+      lowerName.includes('warehouse') || lowerDesc.includes('warehouse')) {
+    return Box; // or Package, PackageOpen, or ClipboardList
+  }
 
   if (lowerName.includes('expensify') || lowerDesc.includes('budget') || lowerDesc.includes('finance')) {
     return Wallet;
@@ -25,11 +32,10 @@ const getProjectIcon = (name, description) => {
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link, live_link }) => {
   const IconComponent = getProjectIcon(name, description);
-  const cardNumber = (index + 1).toString().padStart(2, '0'); // Formats as 01, 02, 03
+  const cardNumber = (index + 1).toString().padStart(2, '0');
 
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      {/* Removed Tilt component - now just a regular div */}
       <div className="bg-tertiary p-6 rounded-2xl sm:w-[360px] w-full hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/10 transition-all duration-300 border border-transparent group relative">
 
         {/* Number at top left */}
@@ -103,10 +109,10 @@ const Works = () => {
         >
           These projects mark important chapters in my technical journey.
           Each one challenged me in a different way, from refining UI details to figuring
-          out why something wasn’t working at 2am. Along the way, I’ve sharpened my JavaScript
+          out why something wasn't working at 2am. Along the way, I've sharpened my JavaScript
           fundamentals, built dynamic interfaces with React, experimented with interactive 3D elements,
           and learned how to make designs feel smooth across different devices using tailwind CSS. More
-          than just “finishing projects,” I’ve focused on understanding what’s happening under the hood,
+          than just "finishing projects," I've focused on understanding what's happening under the hood,
           how components communicate, how structure affects scalability, and how small UI decisions impact
           user experience. Every build has stretched me, improved my problem-solving, and made me more
           intentional about writing clean, thoughtful code.

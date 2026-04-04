@@ -38,19 +38,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Full-Stack Web Developer",
+    title: "Full-Stack development",
     icon: web,
   },
   {
-    title: "React and Tailwind Developer",
+    title: "React + Tailwind CSS",
     icon: mobile,
   },
   {
-    title: "Python Backend Engineer",
+    title: "Python + Flask + SQL",
     icon: backend,
   },
   {
-    title: "Frontend UI Engineer",
+    title: "Responsive UI/UX",
     icon: creator,
   },
 ];
@@ -195,26 +195,26 @@ const projects = [
     live_link: "https://expensifyv2.vercel.app/",
   },
   {
-    name: "Eat Wise",
+    name: "Ledgera",
     description:
-      "EatWise is a personal health dashboard for tracking calories, meals and daily activity.",
+      "A strict inventory and sales tracking system designed to eliminate losses and ensure accountability",
     tags: [
       {
-        name: "HTML",
+        name: "REACT",
         color: "blue-text-gradient",
       },
       {
-        name: "CSS",
+        name: "FLASK",
         color: "green-text-gradient",
       },
       {
-        name: "Javascript",
+        name: "MYSQL",
         color: "pink-text-gradient",
       },
     ],
     image: eatWise,
-    source_code_link: "https://github.com/Waseth/EatWise",
-    live_link: "https://eat-wise-three.vercel.app/",
+    source_code_link: "https://github.com/Waseth/Ledgera",
+    live_link: "https://ledgerav2-kwuzid5ey-waseths-projects.vercel.app/dashboard",
   },
 ];
 
