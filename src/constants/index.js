@@ -10,15 +10,18 @@ import {
   flask,
   sql,
   git,
+  railway,
+  vercel,
   moringa,
   reactIcon,
   pythonIcon,
-  expensify,
   eatWise,
   joash,
   alice,
   lawrence,
   liam,
+  ledgeraLogo,
+  expensifyLogo,
 } from "../assets";
 
 export const navLinks = [
@@ -72,7 +75,7 @@ const technologies = [
     name: "React JS",
     icon: reactIcon,
   },
-   {
+  {
     name: "Python",
     icon: pythonIcon,
   },
@@ -81,57 +84,78 @@ const technologies = [
     icon: flask,
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
     name: "MySQL",
     icon: sql,
   },
   {
-    name: "git",
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+  {
+    name: "Git",
     icon: git,
+  },
+  {
+    name: "Vercel",
+    icon: vercel,
+  },
+  {
+    name: "Railway",
+    icon: railway,
   }
 ];
 
 const experiences = [
   {
-    title: "Full-Stack Web Development Bootcamp",
-    company_name: "Moringa School",
+    title: "MORINGA FULL-STACK DEVELOPMENT BOOTCAMP",
+    company_name: "CERTIFICATION",
     icon: moringa,
     iconBg: "#ffffff",
-    date: "2024",
+    date: "2024 Feb - 2024 Aug",
     points: [
-      "Completed intensive training in HTML, CSS, JavaScript, React, Python, Flask, and SQL.",
-      "Built and deployed multiple full-stack web applications.",
-      "Collaborated on team projects using Git and modern development workflows.",
-      "Focused on writing clean, maintainable, and scalable code.",
+      "Mastered full-stack development with React, Python, Flask, and SQL through intensive hands-on training",
+      "Built and deployed multiple web applications that address specific user needs and business requirements",
+      "Leveraged Git and collaborative workflows to deliver projects efficiently in team settings",
+      "Graduated with a certificate in Full-stack development having met all the program's expectetions"
+    ],
+
+  },
+  {
+    title: "JOMO KENYATTA UNIVERSITY OF AGRICULTURE AND TECHNOLOGY(JKUAT)",
+    company_name: "EDUCATION (COMPUTER TECHNOLOGY)",
+    icon: moringa,
+    iconBg: "#ffffff",
+    date: "In progress",
+    points: [
+      "Currently pursuing Computer Technology as a first-year student, balancing coursework with hands-on development",
+      "Participate in practical lab sessions that sharpen my skills and reinforce real-world application",
+    ],
+
+  },
+  {
+    title: "EXPENSIFY",
+    company_name: "PERSONAL PROJECT",
+    icon: expensifyLogo,
+    iconBg: "#08123a",
+    date: "2025 Dec - 2026 Feb",
+    points: [
+      "Built a personal finance tracker that helps students track expenses, allocate savings, and manage weekly budgets",
+      "Enabled users to track deficits and surpluses from allocated weekly amounts, promoting better financial habits",
+      "Gained approval from JKUAT's J-HUB annual bootcamp and is now helping students manage their finances effectively",
+      "Built with React, Python(Flask) and MySQL, featuring reusable components, optimized performance, and full GitHub documentation",
     ],
   },
   {
-    title: "Frontend Developer",
-    company_name: "Personal Projects",
-    icon: reactIcon,
-    iconBg: "#E6DEDD",
-    date: "2024 - Present",
+    title: "LEDGERA",
+    company_name: "FREELANCE",
+    icon: ledgeraLogo,
+    iconBg: "#0c194c",
+    date: "2026 Feb - 2026 Mar",
     points: [
-      "Building modern and responsive web applications using React and Tailwind CSS.",
-      "Implementing reusable components and clean UI architecture.",
-      "Optimizing applications for performance and responsiveness.",
-      "Maintaining and documenting projects consistently on GitHub.",
-    ],
-  },
-  {
-    title: "Backend Developer",
-    company_name: "Independent Development",
-    icon: pythonIcon,
-    iconBg: "#383E56",
-    date: "2025 - Present",
-    points: [
-      "Developing RESTful APIs using Python.",
-      "Working with databases and backend logic to power full-stack applications.",
-      "Structuring scalable backend systems and clean API architecture.",
-      "Integrating frontend React applications with backend services.",
+      "Landed first freelance client, handling everything from initial discussion to final delivery",
+      "Communicated directly with client to gather requirements and provide updates",
+      "Took ownership of the project from testing through to production deployment",
+      "Delivered a working solution that met the client's needs",
     ],
   },
 ];
@@ -175,7 +199,7 @@ const projects = [
   {
     name: "Expensify",
     description:
-      "A dynamic 4-week budgeting app with automated calculations and visual tracking.",
+      "A dynamic 4-week budgeting app with automated calculations,surplus and deficit allocations and visual tracking.",
     tags: [
       {
         name: "REACT",
@@ -212,9 +236,9 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: eatWise,
+    // image: eatWise,
     source_code_link: "https://github.com/Waseth/Ledgera",
-    live_link: "https://ledgerav2-kwuzid5ey-waseths-projects.vercel.app/dashboard",
+    live_link: "https://ledgerav2.vercel.app",
   },
 ];
 

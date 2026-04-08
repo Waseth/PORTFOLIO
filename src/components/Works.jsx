@@ -107,15 +107,21 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          These projects mark important chapters in my technical journey.
-          Each one challenged me in a different way, from refining UI details to figuring
-          out why something wasn't working at 2am. Along the way, I've sharpened my JavaScript
-          fundamentals, built dynamic interfaces with React, experimented with interactive 3D elements,
-          and learned how to make designs feel smooth across different devices using tailwind CSS. More
-          than just "finishing projects," I've focused on understanding what's happening under the hood,
-          how components communicate, how structure affects scalability, and how small UI decisions impact
-          user experience. Every build has stretched me, improved my problem-solving, and made me more
-          intentional about writing clean, thoughtful code.
+          These projects mark important milestones in my full-stack journey.
+          Each one challenged me differently, from refining UI details to debugging backend logic at 2am
+          and pushing features all the way to production.
+          I've sharpened my JavaScript fundamentals,
+          built dynamic React frontends,
+          developed Python/Flask APIs,
+          integrated databases
+          and deployed complete full-stack applications.
+          Along the way, I learned to connect every piece,
+          from database to server to interface and manage the entire production pipeline.
+          More than just "finishing projects," I focused on understanding how components communicate,
+          how backend structure affects performance
+          and how to ship reliable code to production.
+          Every build stretched my problem-solving and made me more intentional about writing clean,
+          scalable full-stack solutions.
         </motion.p>
       </div>
 

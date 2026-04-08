@@ -46,9 +46,10 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I build modern, responsive web applications using React and Tailwind CSS,
-        with growing expertise in backend development using Python.
-        I consistently document and ship projects, sharing my work and progress on GitHub.
+        I create full-stack solutions that eliminate repetitive tasks and simplify complex operations.
+        Specializing in React for sleek interfaces and Python for powerful backend logic,
+        I ship production-ready applications that deliver results.
+        Head over to my GitHub to see what I'm building.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>

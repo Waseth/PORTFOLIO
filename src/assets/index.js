@@ -23,6 +23,11 @@ import tailwind from "./tech/tailwind.png";
 // import threejs from "./tech/threejs.svg";
 import flask from "./tech/flask.png";
 import sql from "./tech/sql.png";
+import railway from "./tech/railway.png";
+import vercel from "./tech/vercel.png";
+import expensifyLogo from "./tech/expensifylogo.png";
+import ledgeraLogo from "./tech/ledgera.png";
+
 
 import moringa from "./company/moringa.png";
 import reactIcon from "./company/reactIcon.png";
@@ -35,6 +40,7 @@ import joash from "./joash.jpeg";
 import alice from "./alice.jpeg";
 import lawrence from "./lawrence.jpeg"
 import liam from "./liam.jpeg";
+
 
 
 export {
@@ -62,5 +68,9 @@ export {
   joash,
   alice,
   liam,
-  lawrence
+  lawrence,
+  railway,
+  vercel,
+  expensifyLogo,
+  ledgeraLogo,
 };

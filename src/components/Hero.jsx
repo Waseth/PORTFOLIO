@@ -49,7 +49,7 @@ const Hero = () => {
             <span className="hero-builds-outline">BUILDS.</span>
           </h1>
           <p className={`${styles.heroSubText} mt-4 text-white-100 max-w-xl mx-auto lg:mx-0`}>
-            I develop fullstack web applications
+             I build solutions that automate, simplify, and deliver results
           </p>
 
           {(!isMobile || mobileTerminalComplete) && (
