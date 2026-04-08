@@ -70,7 +70,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll indicator - positioned at bottom of hero section, follows natural flow */}
+      {/* Scroll indicator - positioned just below the button on mobile */}
       <AnimatePresence>
         {showScrollIndicator && (
           <motion.div
@@ -88,12 +88,13 @@ const Hero = () => {
               items-center
               justify-center
               gap-3
-              bottom-1
-              mt-1
-              mb-2
-              lg:bottom-10
+              // Mobile positioning - just 10px below button
+              mt-2
+              mb-4
+              // Large screens positioning
               lg:mt-6
               lg:mb-8
+              lg:bottom-10
               xl:bottom-28
               xl:mt-8
               xl:mb-10

@@ -46,13 +46,13 @@ const Terminal = ({ onComplete, isMobile }) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.95 }}
-      transition={{ duration: 0.5 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       className={`
         ${isMobile
-          ? 'w-full max-w-sm mx-auto'
+          ? 'w-full max-w-sm mx-auto mb-2.5' // Added 10px margin bottom (2.5 = 10px)
           : 'w-[320px] h-[240px] lg:w-[450px] lg:h-[240px]'
         }
         relative
@@ -81,7 +81,7 @@ const Terminal = ({ onComplete, isMobile }) => {
           <div className="w-2 h-2 rounded-full bg-green-500"></div>
         </div>
         <span className="text-yellow-500 text-[10px] ml-2 font-mono">
-          {isMobile ? 'waseth@mobile:~' : 'waseth@3d-engine:~'}
+          waseth.dev:~
         </span>
       </div>
 
