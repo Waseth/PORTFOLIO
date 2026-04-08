@@ -37,15 +37,14 @@ const Terminal = ({ onComplete, isMobile }) => {
       return () => clearTimeout(timer);
     } else if (!isComplete) {
       setIsComplete(true);
-      // Terminal disappears immediately on mobile, with delay on desktop
-      const disappearDelay = isMobile ? 300 : 800;
+      // Wait 2 seconds (2000ms) after completion before disappearing for both mobile and desktop
       setTimeout(() => {
         onComplete();
-      }, disappearDelay);
+      }, 2000);
     }
-  }, [currentLine, terminalLines, isComplete, onComplete, isMobile]);
+  }, [currentLine, terminalLines, isComplete, onComplete]);
 
-return (
+  return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -67,6 +66,9 @@ return (
         before:inset-0
         before:rounded-xl
         before:bg-gradient-to-r
+        before:from-yellow-400
+        before:via-yellow-500
+        before:to-yellow-600
         before:-z-10
         before:p-[2px]
       `}

@@ -88,7 +88,7 @@ const Hero = () => {
               items-center
               justify-center
               gap-3
-              bottom-2
+              bottom-12
               mt-6
               mb-6
               lg:bottom-10
