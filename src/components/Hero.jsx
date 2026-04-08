@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { styles } from '../styles';
 import { ComputersCanvas } from './canvas';
+import Terminal from './canvas/Terminal'; // Import the Terminal component
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [showScrollIndicator, setShowScrollIndicator] = useState(false);
   const [mobileTerminalComplete, setMobileTerminalComplete] = useState(false);
+  const [showMobileTerminal, setShowMobileTerminal] = useState(true);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 768px)');
@@ -26,6 +28,7 @@ const Hero = () => {
 
   const handleMobileTerminalComplete = () => {
     setMobileTerminalComplete(true);
+    setShowMobileTerminal(false); // Hide terminal after completion
     setTimeout(() => {
       setShowScrollIndicator(true);
     }, 300);
@@ -60,19 +63,74 @@ const Hero = () => {
               View My Work
             </motion.button>
           )}
+
+          {/* Scroll indicator for mobile - right after the button */}
+          <AnimatePresence>
+            {showScrollIndicator && isMobile && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                transition={{ duration: 0.5 }}
+                className='flex flex-col items-center justify-center gap-3 mt-6'
+              >
+                <a href="#about">
+                  <motion.div
+                    className='w-[30px] h-[50px] rounded-3xl border-4 border-yellow-500 flex justify-center items-start p-2 hover:border-yellow-400 transition-colors duration-300 cursor-pointer bg-black/20 backdrop-blur-sm'
+                    animate={{
+                      y: [0, 8, 0],
+                    }}
+                    transition={{
+                      y: {
+                        duration: 1.5,
+                        repeat: Infinity,
+                        repeatType: 'loop'
+                      }
+                    }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <motion.div
+                      animate={{ y: [0, 24, 0] }}
+                      transition={{
+                        duration: 1.5,
+                        repeat: Infinity,
+                        repeatType: 'loop'
+                      }}
+                      className="w-2 h-2 rounded-full bg-yellow-500 mb-1"
+                    />
+                  </motion.div>
+                </a>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </motion.div>
 
-        <div className="flex-1 w-full h-[400px] lg:h-[500px] relative">
-          <ComputersCanvas
-            on3DLoaded={handle3DLoaded}
-            onMobileTerminalComplete={handleMobileTerminalComplete}
-          />
+        {/* On mobile: Show Terminal, On desktop: Show 3D Canvas */}
+        <div className="flex-1 w-full flex justify-center items-center">
+          {isMobile ? (
+            // Show terminal on mobile
+            showMobileTerminal && (
+              <Terminal
+                onComplete={handleMobileTerminalComplete}
+                isMobile={true}
+              />
+            )
+          ) : (
+            // Show 3D canvas on desktop/tablet
+            <div className="w-full h-[400px] lg:h-[500px] relative">
+              <ComputersCanvas
+                on3DLoaded={handle3DLoaded}
+                onMobileTerminalComplete={handleMobileTerminalComplete}
+              />
+            </div>
+          )}
         </div>
       </div>
 
-      {/* Scroll indicator - positioned just below the button on mobile */}
+      {/* Scroll indicator for desktop only */}
       <AnimatePresence>
-        {showScrollIndicator && (
+        {showScrollIndicator && !isMobile && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -88,10 +146,6 @@ const Hero = () => {
               items-center
               justify-center
               gap-3
-              // Mobile positioning - just 10px below button
-              mt-2
-              mb-4
-              // Large screens positioning
               lg:mt-6
               lg:mb-8
               lg:bottom-10
