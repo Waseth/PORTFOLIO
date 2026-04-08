@@ -54,7 +54,7 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="px-8 py-3 bg-yellow-500 text-black font-semibold rounded-lg hover:bg-yellow-400 transition-all duration-300 hover:scale-105 hover:shadow-lg mt-16 lg:mt-6"
+              className="px-8 py-3 bg-yellow-500 text-black font-semibold rounded-lg hover:bg-yellow-400 transition-all duration-300 hover:scale-105 hover:shadow-lg mt-4 lg:mt-6"
               onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
             >
               View My Work
@@ -88,9 +88,9 @@ const Hero = () => {
               items-center
               justify-center
               gap-3
-              bottom-12
-              mt-6
-              mb-6
+              bottom-1
+              mt-1
+              mb-2
               lg:bottom-10
               lg:mt-6
               lg:mb-8
