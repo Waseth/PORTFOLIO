@@ -19,8 +19,8 @@ const Terminal = ({ onComplete, isMobile }) => {
   ]
 
   const mobileLines = [
-    { text: "> Loading mobile view...", delay: 400 },
-    { text: "> Optimizing for your device...", delay: 800 },
+    { text: "> Loading mobile view...60%", delay: 400 },
+    { text: "> Optimizing for your device...80%", delay: 800 },
     { text: "> Portfolio ready!", delay: 1200 },
     { text: "> Scroll down to explore my work", delay: 1600 },
   ];
@@ -81,7 +81,7 @@ const Terminal = ({ onComplete, isMobile }) => {
           <div className="w-2 h-2 rounded-full bg-green-500"></div>
         </div>
         <span className="text-yellow-500 text-[10px] ml-2 font-mono">
-          waseth.dev:~
+          waseth.dev~
         </span>
       </div>
 
@@ -114,7 +114,7 @@ const Terminal = ({ onComplete, isMobile }) => {
             animate={{ opacity: 1 }}
             className="mt-2 text-green-500 text-[10px]"
           >
-            {isMobile ? 'Tap the button below to continue' : 'System ready! Loading portfolio...'}
+            {isMobile ? '> System ready!' : '> System ready! Loading portfolio...'}
           </motion.div>
         )}
       </div>
