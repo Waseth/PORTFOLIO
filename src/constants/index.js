@@ -127,7 +127,7 @@ const experiences = [
     iconBg: "#ffffff",
     date: "In progress",
     points: [
-      "Currently pursuing Computer Technology as a first-year student, balancing coursework with hands-on development",
+      "Currently pursuing Computer Technology as a second-year student, balancing coursework with hands-on development",
       "Participate in practical lab sessions that sharpen my skills and reinforce real-world application",
     ],
 
